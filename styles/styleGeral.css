@@ -1,0 +1,497 @@
+@import url(https://fonts.googleapis.com/css?=Open+Sans);
+
+body{
+  margin: 0 auto;
+  background-color: #6e3b26;
+  font-family: "Kanit";
+}
+
+#conteudo{
+  background-color: #faead7;
+}
+
+/* parte da nav */
+#navigator{
+  background-color: #6e3b26;
+  padding-top: 0.7%;
+  padding-bottom: 0.7%;
+  padding-left: 1%;
+  display: flex;
+  justify-items: center;
+}
+
+#logo-wonka{
+  width: 8em;
+}
+
+@keyframes pulsar {
+  0% {
+      transform: scale(1);
+  }
+
+  50% {
+      transform: scale(1.1);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
+#logo-wonka:hover{
+  animation: pulsar 0.6s infinite;
+
+}
+
+.nav-texto{
+  text-decoration: none;
+  color: white;
+  font-size: x-large;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#texto-nav-div{
+  width: 33%;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#texto-nav-div a{
+  display: inline-block;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+#texto-nav-div a:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.3s ease;
+  bottom: 90%;
+  margin-top: 2%;
+}
+
+#texto-nav-div a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+#logo-nav-div{
+  width: 33%;
+}
+
+#imagens-nav-div{
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 3%;
+}
+
+#imagens-nav-div a{
+  margin-left: 10%;
+  padding: 1%;
+}
+
+#coracao-nav{
+  width: 2.6em;
+}
+
+@keyframes mexendo-coracao {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(2px, 2px) rotate(10deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-2px, 2px) rotate(-10deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+#coracao-nav:hover{
+  animation: mexendo-coracao 0.40s infinite;
+}
+
+#cesta-nav{
+  width: 3em;
+}
+
+@keyframes mexendo-cesta {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#cesta-nav:hover{
+  animation: mexendo-cesta 0.60s infinite;
+}
+
+/* fim nav */
+
+/* footer */
+#footer{
+  background-color: #6e3b26;
+  color: white;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 0.7%;
+
+}
+
+#footer-principal{
+  font-size: medium;
+}
+
+#footer-nomes{
+  font-size: small;
+}
+
+#github-logo{
+  width: 2.5em;
+  margin-bottom: -0.5%;
+  transition: transform .2s ease-in-out;
+}
+
+#github-logo:hover{
+  transform: scale(1.3);
+}
+
+#saiba-mais-link{
+  text-decoration: none;
+  color: white;
+  box-shadow: inset 0 0 0 0 #faead7;
+  margin: 0 -.20rem;
+  padding: 0 .20rem;
+  border-radius: 0.5em;
+  transition: color .4s ease-in, box-shadow .6s ease-in;
+}
+
+#saiba-mais-link:hover {
+  box-shadow: inset 15em 0 0 0 #faead7;
+  color: #6e3b26;
+  font-weight: bold;
+}
+
+/* fim footer */
+
+/* inicio sobre nós */
+#imagens-sobre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 10rem 4.5rem 10rem;
+}
+
+#imagens-sobre img{
+  width: 18%;
+  border-radius: 30%;
+  transition: transform 0.3s ease-in-out;
+}
+
+#imagens-sobre img:hover{
+  transform: scale(1.2);
+}
+
+#titulo-donas{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3.5em;
+  color: #6e3b26;
+  margin: 2rem 0rem 0rem 0rem;
+}
+
+#paragrafo-sobre{
+  text-align: center;
+  color: #6e3b26;
+  margin: 0 10rem 5rem 10rem;
+  font-size: 1.2rem;
+}
+#titulo-sobre-nos{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#chapeu-donas{
+  width: 3em;
+  transform: rotate(30deg);
+  translate: -0.3em -0.4em;
+}
+
+/* fim sobre nós */
+
+/* busca */
+.imagem-produto{
+  width: 40%;
+  border-radius: 10%;
+}
+
+#produtos{
+  display: grid;
+  grid-template-columns: repeat(3, 30rem);
+  grid-gap: 1.12rem;
+  margin-bottom: 3rem;
+  background-image: url('img/bilhete.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#produtos div {
+  height: 19rem;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 20%;
+  margin: 10px;
+  padding: 8% 5% 5% 5%;
+  text-align: center;
+}
+
+#produtos div:hover,
+#produtos div:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#produtos div:hover {
+  transform: translateY(-1px);
+}
+
+.nome-produto{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #6e3b26;  
+  margin-bottom: -3%;
+}
+
+.preco-produto{
+  color: rgb(163, 163, 163);
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.botao-produto{
+  font-weight: bolder;
+  border: 0;
+  letter-spacing: 0.05em;
+  border-radius: 0.8em;
+  color: #6e3b26;
+  background-color: #faead7;
+  text-align: center;
+  cursor: pointer;
+  font-size: medium;
+  width: 13rem;
+  height: 2.6rem;
+
+  background: #8a523a;
+  color: ghostwhite;
+  overflow: hidden;
+}
+
+.botao-produto:hover{
+  background: #6e3b26;
+}
+
+.botao-produto:active {
+  transform: scale(0.95);
+}
+
+#btnBusca{
+  width:2.2rem;
+  height:2.2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(230, 170, 92);
+  margin-left: 0.2rem;
+}
+
+#btnBusca:hover{
+  background-color: rgb(218, 152, 67);
+}
+
+#btnBusca:active{
+  background-color: rgb(230, 170, 92);
+}
+
+#caixaTexto{
+  border:0;
+  border-radius: 2rem;
+  padding: 0.5rem 0rem 0.5rem 0.9rem;
+  width: 20rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  font-size: large;
+}
+
+#filtro-busca {
+  display: block;
+  width: 12rem;
+  float: left;
+  background-color: rgb(230, 170, 92);
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem;
+  border-radius: 20%;
+  font-size: larger;
+}
+
+.filtros-legenda{
+  font-size: x-large;
+  font-weight: bolder;
+  margin: 0rem 0rem 1rem 1rem;
+}
+
+.botao-filtro{
+  margin: 0rem 1.2rem 1.2rem 1.2rem;
+  font-size: large;
+}
+
+#btnFiltra{
+  text-align: center;
+}
+
+#filtrar{
+  font-size: 1.1rem;
+  border-radius: 10%;
+  border: none;
+  margin-top: 0.2em;
+  padding: 0.6rem;
+  background: #8a523a;
+  color: ghostwhite;
+  font-weight: bolder;
+  letter-spacing: 0.05em;
+  border-radius: 0.8em;
+}
+
+#filtrar:hover{
+  background: #7e4831;
+}
+
+#filtrar:active{
+  background: #8a523a;
+}
+
+#limpar-filtros{
+  font-size: small;
+  border-radius: 10%;
+  border: none;
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+  padding: 0.4rem;
+  color: #8a523a;
+  background: ghostwhite ;
+  font-weight: bolder;
+  letter-spacing: 0.03em;
+  border-radius: 0.8em;
+}
+
+#limpar-filtros:hover{
+  background: rgb(231, 231, 240) ;
+}
+
+#limpar-filtros:active{
+  background: ghostwhite ;
+}
+
+#parte-busca{
+  height: 100%;
+}
+
+#pag-busca{
+  display: flex;
+}
+
+#produto-não-encontrado{
+  font-size: x-large;
+  margin-left: 1rem;
+}
+
+/* fim busca */
+
+/* responsividade */
+@media only screen and (max-width: 1800px) {
+  
+  #produtos{
+    grid-template-columns: repeat(2, 30rem);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #texto-nav-div{
+    width: 50%;
+  }
+
+  #logo-nav-div{
+    width: 25%;
+  }
+  
+  #imagens-nav-div{
+    width: 25%;
+  }
+
+  .nav-texto{
+    font-size: 1.4rem;
+  }
+
+  #paragrafo-sobre{
+    margin: 0 4rem 5rem 4rem;
+  }
+
+  #imagens-sobre{
+    margin: 3rem 4rem 4.5rem 4rem;
+  }
+
+  #produtos{
+    grid-template-columns: repeat(2, 20rem);
+    border-radius: 10%;
+  }
+}
+
+
+@media only screen and (max-width: 680px) {
+  #paragrafo-sobre{
+    margin: 0 2rem 5rem 2rem;
+  }
+
+  #imagens-sobre{
+    margin: 3rem 2rem 4.5rem 2rem;
+  }
+  
+  #imagens-sobre img{
+    width: 22%;
+  }
+
+  #titulo-donas{
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  #chapeu-donas{
+    width: 2.4em;
+    transform: rotate(30deg);
+    translate: -0.3em -0.4em;
+  }
+
+  #texto-nav-div{
+    display: none;
+  }
+  
+  #logo-nav-div{
+    width: 50%;
+    padding-left: 0.2em;
+    padding-top: 0.2em;
+  }
+  
+  #imagens-nav-div{
+    width: 50%;
+  }
+
+  #produtos{
+    grid-template-columns: repeat(1, 20rem);
+  }
+}
